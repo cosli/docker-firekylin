@@ -1,4 +1,4 @@
-FROM node:5.11.0-slim
+FROM node:5.11-slim
 WORKDIR /firekylin
 RUN npm install \
     && npm install -g pm2
