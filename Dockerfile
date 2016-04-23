@@ -1,11 +1,7 @@
 FROM node:5.11-slim
 WORKDIR /
+ADD https://raw.githubusercontent.com/cosli/docker-firekylin/master/package.json /package.json
 RUN echo "Asia/Shanghai" > /etc/timezone \
     && dpkg-reconfigure -f noninteractive tzdata \
-    && wget https://raw.githubusercontent.com/75team/firekylin/master/package.json \
-    && npm install \
-    && npm install -g pm2 
-WORKDIR /firekylin
-ENTRYPOINT ["mv","/node_modules","/firekylin/node_modules"]
-#CMD ["pm2","start","pm2.json"]
-
+    && wget https://raw.githubusercontent.com/cosli/docker-firekylin/master/initfire.sh \
+    && chmod 755 initfire.sh 
