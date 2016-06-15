@@ -1,4 +1,4 @@
-FROM node:5.11-slim
+FROM node:latest
 WORKDIR /
 ADD https://raw.githubusercontent.com/cosli/docker-firekylin/master/package.json /package.json
 RUN echo "Asia/Shanghai" > /etc/timezone \
