@@ -1,10 +1,12 @@
 {
     "name": "Firekylin",
     "description": "A Simple & Fast Node Bloging Platform Base On ThinkJS 2.0 & ReactJS & ES2015+",
-    "version": "0.12.6",
+    "version": "0.13.0",
     "scripts": {
         "start": "node www/development.js",
-        "webpack": "webpack --watch"
+        "webpack": "webpack --watch",
+        "webpack.build": "webpack",
+        "webpack.build.production": "webpack --config=webpack.production.config.babel.js"
     },
     "dependencies": {
         "babel-runtime": "6.x.x",
@@ -17,6 +19,7 @@
         "nunjucks": "^2.3.0",
         "phpass": "^0.1.1",
         "push-to-firekylin": "^0.2.2",
+        "qiniu": "^6.1.13",
         "request": "^2.69.0",
         "semver": "^5.1.0",
         "source-map-support": "^0.4.0",
